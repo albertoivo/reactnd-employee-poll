@@ -14,6 +14,7 @@ This is a React Project to create adn vote for polls related to employment. Have
 
 -   [Prerequisites](#prerequisites)
 -   [Quick start](#quick-start)
+-   [Test](#test)
 -   [Developed with](#developed-with)
 -   [Contributing](#contributing)
 -   [Author](#author)
@@ -32,6 +33,13 @@ This is a React Project to create adn vote for polls related to employment. Have
 1. Start it: `npm start`
 
 It will open your browser at `http://localhost:3000`
+
+## Test
+
+1. Download it
+1. Enter the directory: `cd reactnd-employee-polls`
+1. Install the dependencies: `npm install`
+1. Start it: `npm test`
 
 ## Developed with
 

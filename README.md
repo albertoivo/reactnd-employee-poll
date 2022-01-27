@@ -1,98 +1,54 @@
-# Employee Polls Project
+# MyReads Project
 
-This is the starter code for the final assessment project for Udacity's React & Redux course.
+![Certified By Ivo](https://img.shields.io/badge/Certified%20By-Ivo-blue.svg)
+[![Build Status](https://semaphoreapp.com/api/v1/projects/d4cca506-99be-44d2-b19e-176f36ec8cf1/128505/shields_badge.svg)](https://semaphoreapp.com/boennemann/badges)
+[![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
-The `_DATA.js` file represents a fake database and methods that let you access the data. The only thing you need to edit in the ` _DATA.js` file is the value of `avatarURL`. Each user should have an avatar, so you’ll need to add the path to each user’s avatar.
 
-Using the provided starter code, you'll build a React/Redux front end for the application. We recommend using the [Create React App](https://github.com/facebook/create-react-app) to bootstrap the project.
+This is a React Project to create adn vote for polls related to employment. Have fun!
 
-## Data
 
-There are two types of objects stored in our database:
+## Table of contents
 
-* Users
-* Questions
+-   [Prerequisites](#prerequisites)
+-   [Quick start](#quick-start)
+-   [Developed with](#developed-with)
+-   [Contributing](#contributing)
+-   [Author](#author)
+-   [License](#license)
 
-### Users
+## Prerequisites
 
-Users include:
+1.  Node
+2.  NPM
 
-| Attribute    | Type             | Description           |
-|-----------------|------------------|-------------------         |
-| id                 | String           | The user’s unique identifier |
-| password   | String           | The user’s password in order to log in the application |
-| name          | String           | The user’s first name  and last name     |
-| avatarURL  | String           | The path to the image file |
-| questions | Array | A list of ids of the polling questions this user created|
-| answers      | Object         |  The object's keys are the ids of each question this user answered. The value of each key is the answer the user selected. It can be either `'optionOne'` or `'optionTwo'` since each question has two options.
+## Quick start
 
-### Questions
+1. Download it
+1. Enter the directory: `cd reactnd-employee-polls`
+1. Install the dependencies: `npm install`
+1. Start it: `npm start`
 
-Questions include:
+It will open your browser at `http://localhost:3000`
 
-| Attribute | Type | Description |
-|-----------------|------------------|-------------------|
-| id                  | String | The question’s unique identifier |
-| author        | String | The author’s unique identifier |
-| timestamp | String | The time when the question was created|
-| optionOne | Object | The first voting option|
-| optionTwo | Object | The second voting option|
+## Developed with
 
-### Voting Options
+* [React JS](https://reactjs.org/)
+* [Redux](https://redux.js.org)
+* [Jest](https://jestjs.io)
 
-Voting options are attached to questions. They include:
+## Contributing
 
-| Attribute | Type | Description |
-|-----------------|------------------|-------------------|
-| votes             | Array | A list that contains the id of each user who voted for that option|
-| text                | String | The text of the option |
+We welcome contributions to this project!
 
-Your code will talk to the database via 4 methods:
+-   ⇄ Pull requests and ★ Stars are always welcome.
 
-* `_getUsers()`
-* `_getQuestions()`
-* `_saveQuestion(question)`
-* `_saveQuestionAnswer(object)`
+## Author
 
-1) `_getUsers()` Method
+* **Alberto Ivo Vieira** - [Github](https://github.com/albertoivo) | [LinkedIn](https://www.linkedin.com/in/alberto-ivo-vieira/)
 
-*Description*: Get all of the existing users from the database.  
-*Return Value*: Object where the key is the user’s id and the value is the user object.
+## License
 
-2) `_getQuestions()` Method
-
-*Description*: Get all of the existing questions from the database.  
-*Return Value*: Object where the key is the question’s id and the value is the question object.
-
-3) `_saveQuestion(question)` Method
-
-*Description*: Save the polling question in the database. If one of the parameters are missing, an error is thrown.
-*Parameters*:  Object that includes the following properties: `author`, `optionOneText`, and `optionTwoText`. More details about these properties:
-
-| Attribute | Type | Description |
-|-----------------|------------------|-------------------|
-| author | String | The id of the user who posted the question|
-| optionOneText| String | The text of the first option |
-| optionTwoText | String | The text of the second option |
-
-*Return Value*:  An object that has the following properties: `id`, `author`, `optionOne`, `optionTwo`, `timestamp`. More details about these properties:
-
-| Attribute | Type | Description |
-|-----------------|------------------|-------------------|
-| id | String | The id of the question that was posted|
-| author | String | The id of the user who posted the question|
-| optionOne | Object | The object has a text property and a votes property, which stores an array of the ids of the users who voted for that option|
-| optionTwo | Object | The object has a text property and a votes property, which stores an array of the ids of the users who voted for that option|
-|timestamp|String | The time when the question was created|
-
-4) `_saveQuestionAnswer(object)` Method
-
-*Description*: Save the answer to a particular polling question in the database. If one of the parameters are missing, an error is thrown.
-*Parameters*: Object that contains the following properties: `authedUser`, `qid`, and `answer`. More details about these properties:
-
-| Attribute | Type | Description |
-|-----------------|------------------|-------------------|
-| authedUser | String | The id of the user who answered the question|
-| qid | String | The id of the question that was answered|
-| answer | String | The option the user selected. The value should be either `"optionOne"` or `"optionTwo"`|
-
+See [LICENSE FILE](./LICENSE).

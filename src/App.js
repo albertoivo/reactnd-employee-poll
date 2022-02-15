@@ -9,7 +9,7 @@ function App({ authedUser, loadingBar, dispatch }) {
 
 	useEffect(() => {
 		dispatch(handleInitialData())
-	}, []);
+	}, [dispatch]);
 
 	return (loadingBar.default === undefined)
 		? <div className="d-flex justify-content-center">
